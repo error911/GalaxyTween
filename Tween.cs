@@ -5,7 +5,7 @@ using UnityEngine;
 namespace GGTools.GGTween
 {
     //[ExecuteInEditMode]
-    public class GGTween : MonoBehaviour
+    public class Tween : MonoBehaviour
     {
         #region Доступ
 
@@ -35,15 +35,15 @@ namespace GGTools.GGTween
         }
 
         [SerializeField]
-        private static GGTween m_Instance;
+        private static Tween m_Instance;
 
-        private static GGTween instance
+        private static Tween instance
         {
             get
             {
                 if (m_Instance == null)
                 {
-                    m_Instance = new GameObject("GGTweenModule").AddComponent<GGTween>();
+                    m_Instance = new GameObject("GGTweenModule").AddComponent<Tween>();
                 }
                 return m_Instance;
             }

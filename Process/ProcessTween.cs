@@ -117,7 +117,7 @@ namespace GGTools.GGTween
             }
 
             m_TweenId = -1;
-            GGTween.Release(this);
+            Tween.Release(this);
         }
 
         private void SetupCurves()
