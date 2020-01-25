@@ -13,16 +13,20 @@ Free license: CC BY Murnik Roman
 - Quaternion
 
 ===== Usage example =====
-	using GGTools.GGTween;
-
-	var startPos = new Vector3(0,0,0);
-	var endPos = new Vector3(3,6,0);
-	Tween.TweenVector3((pos) => transform.position = pos, startPos, endPos, 1);
+  using GGTools.GGTween;
+  void Sample1()
+  {
+    var startPos = new Vector3(0,0,0);
+    var endPos = new Vector3(3,6,0);
+    Tween.TweenVector3((pos) => transform.position = pos, startPos, endPos, 1);
+  }
 
 ===== Animation Interruption Example =====
-	int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
-	Tween.EndTween(t);
-
+  void Sample2()
+  {
+    int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
+    Tween.EndTween(t);
+  }
 
 
 
