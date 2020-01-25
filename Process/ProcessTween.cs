@@ -25,7 +25,7 @@ namespace GGTools.GGTween
         private AnimationCurve[] m_AnimationCurves;
         private Keyframe[][] m_Keyframes;
 
-        protected BaseTween.TweenType m_TweenType;
+        protected TweenType m_TweenType;
         protected AnimationCurve m_CustomCurve;
 
         protected abstract int ValueLength();
@@ -33,7 +33,7 @@ namespace GGTools.GGTween
         protected abstract void OnFinalUpdateValue();
         protected abstract float GetValue(bool isEnd, int valueIndex);
 
-        public void Initialize(float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_Duration = duration;
             m_Delay = delay;
@@ -125,7 +125,7 @@ namespace GGTools.GGTween
             m_AnimationCurves = new AnimationCurve[ValueLength()];
             m_Keyframes = new Keyframe[ValueLength()][];
 
-            if (m_TweenType == BaseTween.TweenType.Custom)
+            if (m_TweenType == TweenType.Custom)
             {
                 for (int i = 0; i < ValueLength(); i++)
                 {
@@ -191,7 +191,7 @@ namespace GGTools.GGTween
             return 1;
         }
 
-        public void Initialize(Action<int> updateValue, Func<int> startValue, Func<int> targetValue, float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(Action<int> updateValue, Func<int> startValue, Func<int> targetValue, float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_GetStartValue = startValue;
             m_UpdateValue = updateValue;
@@ -256,7 +256,7 @@ namespace GGTools.GGTween
             return 1;
         }
 
-        public void Initialize(Action<float> updateValue, Func<float> startValue, Func<float> targetValue, float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(Action<float> updateValue, Func<float> startValue, Func<float> targetValue, float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_GetStartValue = startValue;
             m_UpdateValue = updateValue;
@@ -327,7 +327,7 @@ namespace GGTools.GGTween
             return 2;
         }
 
-        public void Initialize(Action<Vector2> updateValue, Func<Vector2> startValue, Func<Vector2> targetValue, float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(Action<Vector2> updateValue, Func<Vector2> startValue, Func<Vector2> targetValue, float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_GetStartValue = startValue;
             m_UpdateValue = updateValue;
@@ -402,7 +402,7 @@ namespace GGTools.GGTween
             return 3;
         }
 
-        public void Initialize(Action<Vector3> updateValue, Func<Vector3> startValue, Func<Vector3> targetValue, float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(Action<Vector3> updateValue, Func<Vector3> startValue, Func<Vector3> targetValue, float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_GetStartValue = startValue;
             m_UpdateValue = updateValue;
@@ -478,7 +478,7 @@ namespace GGTools.GGTween
             return 4;
         }
 
-        public void Initialize(Action<Vector4> updateValue, Func<Vector4> startValue, Func<Vector4> targetValue, float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(Action<Vector4> updateValue, Func<Vector4> startValue, Func<Vector4> targetValue, float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_GetStartValue = startValue;
             m_UpdateValue = updateValue;
@@ -555,7 +555,7 @@ namespace GGTools.GGTween
             return 4;
         }
 
-        public void Initialize(Action<Color> updateValue, Func<Color> startValue, Func<Color> targetValue, float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(Action<Color> updateValue, Func<Color> startValue, Func<Color> targetValue, float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_GetStartValue = startValue;
             m_UpdateValue = updateValue;
@@ -632,7 +632,7 @@ namespace GGTools.GGTween
             return 1;
         }
 
-        public void Initialize(Action<Quaternion> updateValue, Func<Quaternion> startValue, Func<Quaternion> targetValue, float duration, float delay, BaseTween.TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
+        public void Initialize(Action<Quaternion> updateValue, Func<Quaternion> startValue, Func<Quaternion> targetValue, float duration, float delay, TweenType tweenType, Action callback, AnimationCurve animationCurve, bool scaledTime, int id)
         {
             m_GetStartValue = startValue;
             m_UpdateValue = updateValue;

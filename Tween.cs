@@ -155,6 +155,11 @@ namespace GGTools.GGTween
             return false;
         }
 
+        /// <summary>
+        /// Остановить твин
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="callCallback"></param>
         public static void EndTween(int id, bool callCallback = false)
         {
 #if UNITY_EDITOR
@@ -173,19 +178,19 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Generic
+        #region ===== Тип Generic =====
 
-        public static int TweenValue<T>(Action<T> updateValue, T startValue, T targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+        public static int TweenValue<T>(Action<T> updateValue, T startValue, T targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenValue<T>(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime, tweenType);
         }
 
-        public static int TweenValue<T>(Action<T> updateValue, Func<T> startValue, T targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+        public static int TweenValue<T>(Action<T> updateValue, Func<T> startValue, T targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenValue<T>(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime, tweenType);
         }
 
-        public static int TweenValue<T>(Action<T> updateValue, Func<T> startValue, Func<T> targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+        public static int TweenValue<T>(Action<T> updateValue, Func<T> startValue, Func<T> targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             if (typeof(T) == typeof(float))
             {
@@ -267,22 +272,22 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Float
+        #region ===== Тип Float =====
 
         [SerializeField]
         private TweenQueue<ProcessTweenFloat> m_TweenFloatQueue = new TweenQueue<ProcessTweenFloat>();
 
-        public static int TweenFloat(Action<float> updateValue, float startValue, float targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+        public static int TweenFloat(Action<float> updateValue, float startValue, float targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenFloat(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime, tweenType);
         }
 
-        public static int TweenFloat(Action<float> updateValue, Func<float> startValue, float targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+        public static int TweenFloat(Action<float> updateValue, Func<float> startValue, float targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenFloat(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime, tweenType);
         }
 
-        public static int TweenFloat(Action<float> updateValue, Func<float> startValue, Func<float> targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+        public static int TweenFloat(Action<float> updateValue, Func<float> startValue, Func<float> targetValue, float duration, float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -325,7 +330,7 @@ namespace GGTools.GGTween
             int id = instance.m_TweenIdCount;
             instance.m_TweenIdCount++;
 
-            tween.Initialize(updateValue, startValue, targetValue, duration, delay, BaseTween.TweenType.Custom, callback, animationCurve, scaledTime, id);
+            tween.Initialize(updateValue, startValue, targetValue, duration, delay, TweenType.Custom, callback, animationCurve, scaledTime, id);
 
             instance.m_ActiveTweens.Add(tween);
 
@@ -334,27 +339,27 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Int
+        #region ===== Тип Int =====
 
         [SerializeField]
         private TweenQueue<ProcessTweenInt> m_TweenIntQueue = new TweenQueue<ProcessTweenInt>();
 
         public static int TweenInt(Action<int> updateValue, int startValue, int targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenInt(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenInt(Action<int> updateValue, Func<int> startValue, int targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenInt(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenInt(Action<int> updateValue, Func<int> startValue, Func<int> targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -399,7 +404,7 @@ namespace GGTools.GGTween
             int id = instance.m_TweenIdCount;
             instance.m_TweenIdCount++;
 
-            tween.Initialize(updateValue, startValue, targetValue, duration, delay, BaseTween.TweenType.Custom, callback, animationCurve, scaledTime, id);
+            tween.Initialize(updateValue, startValue, targetValue, duration, delay, TweenType.Custom, callback, animationCurve, scaledTime, id);
 
             instance.m_ActiveTweens.Add(tween);
 
@@ -408,27 +413,27 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Vector2
+        #region ===== Тип Vector2 =====
 
         [SerializeField]
         private TweenQueue<ProcessTweenVector2> m_TweenVector2Queue = new TweenQueue<ProcessTweenVector2>();
 
         public static int TweenVector2(Action<Vector2> updateValue, Vector2 startValue, Vector2 targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenVector2(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenVector2(Action<Vector2> updateValue, Func<Vector2> startValue, Vector2 targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenVector2(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenVector2(Action<Vector2> updateValue, Func<Vector2> startValue, Func<Vector2> targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -473,7 +478,7 @@ namespace GGTools.GGTween
             int id = instance.m_TweenIdCount;
             instance.m_TweenIdCount++;
 
-            tween.Initialize(updateValue, startValue, targetValue, duration, delay, BaseTween.TweenType.Custom, callback, animationCurve, scaledTime, id);
+            tween.Initialize(updateValue, startValue, targetValue, duration, delay, TweenType.Custom, callback, animationCurve, scaledTime, id);
 
             instance.m_ActiveTweens.Add(tween);
 
@@ -482,27 +487,27 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Vector3
+        #region ===== Тип Vector3 =====
 
         [SerializeField]
         private TweenQueue<ProcessTweenVector3> m_TweenVector3Queue = new TweenQueue<ProcessTweenVector3>();
 
         public static int TweenVector3(Action<Vector3> updateValue, Vector3 startValue, Vector3 targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenVector3(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenVector3(Action<Vector3> updateValue, Func<Vector3> startValue, Vector3 targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenVector3(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenVector3(Action<Vector3> updateValue, Func<Vector3> startValue, Func<Vector3> targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -547,7 +552,7 @@ namespace GGTools.GGTween
             int id = instance.m_TweenIdCount;
             instance.m_TweenIdCount++;
 
-            tween.Initialize(updateValue, startValue, targetValue, duration, delay, BaseTween.TweenType.Custom, callback, animationCurve, scaledTime, id);
+            tween.Initialize(updateValue, startValue, targetValue, duration, delay, TweenType.Custom, callback, animationCurve, scaledTime, id);
 
             instance.m_ActiveTweens.Add(tween);
 
@@ -556,27 +561,27 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Vector4
+        #region ===== Тип Vector4 =====
 
         [SerializeField]
         private TweenQueue<ProcessTweenVector4> m_TweenVector4Queue = new TweenQueue<ProcessTweenVector4>();
 
         public static int TweenVector4(Action<Vector4> updateValue, Vector4 startValue, Vector4 targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenVector4(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenVector4(Action<Vector4> updateValue, Func<Vector4> startValue, Vector4 targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenVector4(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenVector4(Action<Vector4> updateValue, Func<Vector4> startValue, Func<Vector4> targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -621,7 +626,7 @@ namespace GGTools.GGTween
             int id = instance.m_TweenIdCount;
             instance.m_TweenIdCount++;
 
-            tween.Initialize(updateValue, startValue, targetValue, duration, delay, BaseTween.TweenType.Custom, callback, animationCurve, scaledTime, id);
+            tween.Initialize(updateValue, startValue, targetValue, duration, delay, TweenType.Custom, callback, animationCurve, scaledTime, id);
 
             instance.m_ActiveTweens.Add(tween);
 
@@ -630,27 +635,27 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Color
+        #region ===== Тип Color =====
 
         [SerializeField]
         private TweenQueue<ProcessTweenColor> m_TweenColorQueue = new TweenQueue<ProcessTweenColor>();
 
         public static int TweenColor(Action<Color> updateValue, Color startValue, Color targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenColor(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenColor(Action<Color> updateValue, Func<Color> startValue, Color targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenColor(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenColor(Action<Color> updateValue, Func<Color> startValue, Func<Color> targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -695,7 +700,7 @@ namespace GGTools.GGTween
             int id = instance.m_TweenIdCount;
             instance.m_TweenIdCount++;
 
-            tween.Initialize(updateValue, startValue, targetValue, duration, delay, BaseTween.TweenType.Custom, callback, animationCurve, scaledTime, id);
+            tween.Initialize(updateValue, startValue, targetValue, duration, delay, TweenType.Custom, callback, animationCurve, scaledTime, id);
 
             instance.m_ActiveTweens.Add(tween);
 
@@ -704,27 +709,27 @@ namespace GGTools.GGTween
 
         #endregion
 
-        #region Тип Quaternion
+        #region ===== Тип Quaternion =====
 
         [SerializeField]
         private TweenQueue<ProcessTweenQuaternion> m_TweenQuaternionQueue = new TweenQueue<ProcessTweenQuaternion>();
 
         public static int TweenQuaternion(Action<Quaternion> updateValue, Quaternion startValue, Quaternion targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenQuaternion(updateValue, () => startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenQuaternion(Action<Quaternion> updateValue, Func<Quaternion> startValue, Quaternion targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
             return TweenQuaternion(updateValue, startValue, () => targetValue, duration, delay, callback, scaledTime,
                 tweenType);
         }
 
         public static int TweenQuaternion(Action<Quaternion> updateValue, Func<Quaternion> startValue, Func<Quaternion> targetValue, float duration,
-            float delay = 0f, Action callback = null, bool scaledTime = false, BaseTween.TweenType tweenType = BaseTween.TweenType.EaseOutQuint)
+            float delay = 0f, Action callback = null, bool scaledTime = false, TweenType tweenType = TweenType.EaseOutQuint)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying)
@@ -769,7 +774,7 @@ namespace GGTools.GGTween
             int id = instance.m_TweenIdCount;
             instance.m_TweenIdCount++;
 
-            tween.Initialize(updateValue, startValue, targetValue, duration, delay, BaseTween.TweenType.Custom, callback, animationCurve, scaledTime, id);
+            tween.Initialize(updateValue, startValue, targetValue, duration, delay, TweenType.Custom, callback, animationCurve, scaledTime, id);
 
             instance.m_ActiveTweens.Add(tween);
 

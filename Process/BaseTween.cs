@@ -2,59 +2,61 @@
 
 namespace GGTools.GGTween
 {
+
+    /// <summary>
+    /// Различные типы кривых
+    /// </summary>
+    public enum TweenType
+    {
+        Custom,
+
+        /// <summary>
+        /// Равномерная интерполяция
+        /// </summary>
+        Linear,
+
+        /// <summary>
+        /// Пролет чуть дальше и возврат на финиш
+        /// </summary>
+        Overshoot,
+
+        /// <summary>
+        /// Небольшой отскок (отдача) в конце
+        /// </summary>
+        Bounce,
+
+        EaseInCubed,
+        EaseInQuint,
+        EaseInSept,
+        EaseOutCubed,
+        EaseOutQuint,
+        EaseOutSept,
+        EaseInOutCubed,
+
+        /// <summary>
+        /// Медленно, с нарастанием в середине и угасанием в конце
+        /// </summary>
+        EaseInOutQuint,
+
+        /// <summary>
+        /// Быстро в середине
+        /// </summary>
+        EaseInOutSept,
+
+        /// <summary>
+        /// Нарастание скорости
+        /// </summary>
+        SoftEaseOutCubed,
+        SoftEaseOutQuint,
+        SoftEaseOutSept
+    };
+
+
     /// <summary>
     /// Класс, используемый для анимации значений вручную (или поиска значений на основе кривых)
     /// </summary>
     public static class BaseTween
     {
-        /// <summary>
-        /// Различные типы кривых
-        /// </summary>
-        public enum TweenType
-        {
-            Custom,
-
-            /// <summary>
-            /// Равномерная интерполяция
-            /// </summary>
-            Linear,
-
-            /// <summary>
-            /// Пролет чуть дальше и возврат на финиш
-            /// </summary>
-            Overshoot,
-
-            /// <summary>
-            /// Небольшой отскок (отдача) в конце
-            /// </summary>
-            Bounce,
-
-            EaseInCubed,
-            EaseInQuint,
-            EaseInSept,
-            EaseOutCubed,
-            EaseOutQuint,
-            EaseOutSept,
-            EaseInOutCubed,
-
-            /// <summary>
-            /// Медленно, с нарастанием в середине и угасанием в конце
-            /// </summary>
-            EaseInOutQuint,
-
-            /// <summary>
-            /// Быстро в середине
-            /// </summary>
-            EaseInOutSept,
-
-            /// <summary>
-            /// Нарастание скорости
-            /// </summary>
-            SoftEaseOutCubed,
-            SoftEaseOutQuint,
-            SoftEaseOutSept
-        };
-
         /// <summary>
         /// Создает набор ключей AnimationCurve из типа анимации
         /// Требуется только если вы хотите создать свои собственные AnimationCurves из функций анимации
