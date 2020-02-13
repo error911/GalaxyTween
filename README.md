@@ -1,14 +1,11 @@
 # GGTween
 
 Free license: CC BY Murnik Roman
-Свободная лицензия: CC BY Murnik Roman
-
 Tested in Unity 2019.2.X +
 
-======================================    
- Support types
- Поддерживаемые типы
-======================================    
+____
+ ## Support types (Поддерживаемые типы)    
+____
 - Generic (any type of the following)
 - Float
 - Int
@@ -18,26 +15,24 @@ Tested in Unity 2019.2.X +
 - Color
 - Quaternion
 
-======================================    
- Usage example
- Пример использования
-======================================    
-		
-		using GGTools.GGTween;
-		void Sample_1()
-		{
-				var startPos = new Vector3(0,0,0);
-				var endPos = new Vector3(3,6,0);
-				Tween.TweenVector3((pos) => transform.position = pos, startPos, endPos, 1);
-		}
-
-======================================    
- Animation Interruption Example
- Пример прерывания процесса анимации
-======================================    
+____  
+ ## Usage example (Пимер использования)
+____   
+	
+```using GGTools.GGTween;
+void Sample_1()
+{
+	var startPos = new Vector3(0,0,0);
+	var endPos = new Vector3(3,6,0);
+	Tween.TweenVector3((pos) => transform.position = pos, startPos, endPos, 1);
+}
+```
+____   
+ ## Animation Interruption Example (Пример прерывания процесса анимации)
+____  
   
-		void Sample_2()
-		{
-				int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
-				Tween.EndTween(t);
-		}
+	void Sample_2()
+	{
+		int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
+		Tween.EndTween(t);
+	}
