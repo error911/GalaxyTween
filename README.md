@@ -37,6 +37,29 @@ void Sample_1()
 void Sample_2()
 {
 	int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
-	Tween.EndTween(t);
+	// ...some code
+	Tween.StopTween(t);
 }
 ```
+
+## Animation Interruption Example (Задать нелинейность интерполяции)
+
+```C#  
+void Sample_3()
+{
+	int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 10, 0, null, false, TweenType.Bounce);
+}
+```
+## Animation completion events Example (События при завершении анимации)
+
+```C#  
+void Sample_4()
+{
+	Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 10, 0, TweenIsEnded, false, TweenType.Bounce);
+	void TweenIsEnded()
+        {
+            Debug.Log("Completed");
+        }
+}
+```
+
