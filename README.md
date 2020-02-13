@@ -32,9 +32,9 @@ ____
  ## Animation Interruption Example (Пример прерывания процесса анимации)
 ____  
 ```C#  
-	void Sample_2()
-	{
-		int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
-		Tween.EndTween(t);
-	}
+void Sample_2()
+{
+	int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
+	Tween.EndTween(t);
+}
 ```
