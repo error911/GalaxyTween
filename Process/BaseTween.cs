@@ -5,7 +5,7 @@
 
 using UnityEngine;
 
-namespace GGTools.GGTween
+namespace GGTools   //.GGTween
 {
 
     /// <summary>

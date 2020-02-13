@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GGTools.GGTween
+namespace GGTools   //.GGTween
 {
     //[ExecuteInEditMode]
     public class Tween : MonoBehaviour

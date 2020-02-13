@@ -6,7 +6,7 @@
 using System;
 using UnityEngine;
 
-namespace GGTools.GGTween
+namespace GGTools   //.GGTween
 {
     public abstract class ProcessTween
     {
