@@ -165,7 +165,7 @@ namespace GGTools.GGTween
         /// </summary>
         /// <param name="id"></param>
         /// <param name="callCallback"></param>
-        public static void EndTween(int id, bool callCallback = false)
+        public static void StopTween(int id, bool callCallback = false)
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying) return;
