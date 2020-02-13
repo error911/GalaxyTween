@@ -3,7 +3,7 @@
 Free license: CC BY Murnik Roman    
 Tested in Unity 2019.2.X +
 
-____
+
  ## Support types (Поддерживаемые типы)    
 ____
 - [X] Generic (any type of the following)
@@ -15,7 +15,7 @@ ____
 - [X] Color
 - [X] Quaternion
 
-____  
+
  ## Usage example (Пимер использования)
 ____   
 ```C#	
@@ -28,7 +28,7 @@ void Sample_1()
 }
 
 ```
-____   
+
  ## Animation Interruption Example (Пример прерывания процесса анимации)
 ____  
 ```C#  
