@@ -1,4 +1,6 @@
 # GGTween
+Allows you to easily create a transition, animation, lerp or timer.    
+Позволяет легко создать переход, анимацию, лерп или таймер.
 
 Free license: CC BY Murnik Roman    
 Tested in Unity 2019.2.X +
