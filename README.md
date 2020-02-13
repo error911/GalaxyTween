@@ -5,11 +5,9 @@ Allows you to easily create a transition, animation, lerp or timer.
 Free license: CC BY Murnik Roman    
 Tested in Unity 2019.2.X +
 
-Входит в состав набора инструментов GGTools    
-*Рекомендуемое расположение в проекте: Assets/GGTools/GGTween*    
-Included in the GGTools Toolkit    
-*Recommended location in the project: Assets/GGTools/GGTween*    
-
+Входит в состав набора инструментов GGTools. Рекомендуемое расположение в проекте:    
+Included in the GGTools Toolkit. Recommended location in the project:    
+*Assets/GGTools/GGTween*    
 ____
 
  ## Support types (Поддерживаемые типы)    
