@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* 
+ * https://github.com/error911/GGTween
+ * Free license: CC BY Murnik Roman
+ */
+
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 

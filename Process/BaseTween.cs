@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/* 
+ * https://github.com/error911/GGTween
+ * Free license: CC BY Murnik Roman
+ */
+
+using UnityEngine;
 
 namespace GGTools.GGTween
 {
