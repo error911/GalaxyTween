@@ -21,19 +21,19 @@ ____
  ## Usage example (Пимер использования)
 
 ```C#	
-using GGTools.GGTween;
+using GGTools;
 void Sample_1()
 {
 	var startPos = new Vector3(0,0,0);
 	var endPos = new Vector3(3,6,0);
 	Tween.TweenVector3((pos) => transform.position = pos, startPos, endPos, 1);
 }
-
 ```
 
  ## Animation Interruption Example (Пример прерывания процесса анимации)
 
 ```C#  
+using GGTools;
 void Sample_2()
 {
 	int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 5);
@@ -45,6 +45,7 @@ void Sample_2()
 ## Animation Interruption Example (Задать нелинейность интерполяции)
 
 ```C#  
+using GGTools;
 void Sample_3()
 {
 	int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 10, 0, null, false, TweenType.Bounce);
@@ -53,6 +54,7 @@ void Sample_3()
 ## Animation completion events Example (События при завершении анимации)
 
 ```C#  
+using GGTools;
 void Sample_4()
 {
 	Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 10, 0, TweenIsEnded, false, TweenType.Bounce);
