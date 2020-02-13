@@ -1,6 +1,9 @@
 # GGTween
 **Входит в состав набора инструментов GGTools**    
 **Included in the GGTools Toolkit**    
+Рекомендуемое расположение в проекте: Assets/GGTools/GGTween    
+Recommended location in the project: Assets/GGTools/GGTween    
+
 Allows you to easily create a transition, animation, lerp or timer.    
 Позволяет легко создать переход, анимацию, лерп или таймер.
 
