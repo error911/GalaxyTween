@@ -2,10 +2,10 @@
 
 Free license: CC BY Murnik Roman    
 Tested in Unity 2019.2.X +
-
+____
 
  ## Support types (Поддерживаемые типы)    
-____
+
 - [X] Generic (any type of the following)
 - [X] Float
 - [X] Int
@@ -17,7 +17,7 @@ ____
 
 
  ## Usage example (Пимер использования)
-____   
+
 ```C#	
 using GGTools.GGTween;
 void Sample_1()
@@ -30,7 +30,7 @@ void Sample_1()
 ```
 
  ## Animation Interruption Example (Пример прерывания процесса анимации)
-____  
+
 ```C#  
 void Sample_2()
 {
