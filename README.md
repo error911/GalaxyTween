@@ -9,8 +9,8 @@ ____
  ## Support types (Поддерживаемые типы)    
 
 - [X] Generic (any type of the following)
-- [X] Float
 - [X] Int
+- [X] Float
 - [X] Vector2
 - [X] Vector3
 - [X] Vector4
