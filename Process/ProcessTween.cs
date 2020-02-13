@@ -89,7 +89,7 @@ namespace GGTools.GGTween
                     }
                     catch (Exception)
                     {
-                        EndTween(false);
+                        StopTween(false);
                     }
                 }
                 else
@@ -104,12 +104,12 @@ namespace GGTools.GGTween
                     }
 
                     m_Active = false;
-                    EndTween(true);
+                    StopTween(true);
                 }
             }
         }
 
-        public void EndTween(bool callback)
+        public void StopTween(bool callback)
         {
             if (callback)
             {
@@ -204,7 +204,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -218,7 +218,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -269,7 +269,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -282,7 +282,7 @@ namespace GGTools.GGTween
             }
             catch (Exception)
             {
-                EndTween(false);
+                StopTween(false);
             }
         }
 
@@ -290,7 +290,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -340,7 +340,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -353,7 +353,7 @@ namespace GGTools.GGTween
             }
             catch (Exception)
             {
-                EndTween(false);
+                StopTween(false);
             }
         }
 
@@ -361,7 +361,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -415,7 +415,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -428,7 +428,7 @@ namespace GGTools.GGTween
             }
             catch (Exception)
             {
-                EndTween(false);
+                StopTween(false);
             }
         }
 
@@ -436,7 +436,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -491,7 +491,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -504,7 +504,7 @@ namespace GGTools.GGTween
             }
             catch (Exception)
             {
-                EndTween(false);
+                StopTween(false);
             }
         }
 
@@ -512,7 +512,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -568,7 +568,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -581,7 +581,7 @@ namespace GGTools.GGTween
             }
             catch (Exception)
             {
-                EndTween(false);
+                StopTween(false);
             }
         }
 
@@ -589,7 +589,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -645,7 +645,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 
@@ -659,7 +659,7 @@ namespace GGTools.GGTween
         {
             if (m_UpdateValue == null)
             {
-                EndTween(false);
+                StopTween(false);
                 return;
             }
 

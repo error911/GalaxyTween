@@ -171,7 +171,7 @@ namespace GGTools.GGTween
 
                 if (tween.tweenId == id)
                 {
-                    tween.EndTween(callCallback);
+                    tween.StopTween(callCallback);
                 }
             }
         }
