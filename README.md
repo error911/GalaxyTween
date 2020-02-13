@@ -1,7 +1,7 @@
 # GGTween
 
 г========================================¬
-¦ Free license: CC BY Murnik Roman       ¦ 
+¦ Free license: CC BY Murnik Roman       ¦
 ¦ Свободная лицензия: CC BY Murnik Roman ¦
 ¦========================================¦
 ¦ Tested in Unity 2019.2.X +	         ¦
