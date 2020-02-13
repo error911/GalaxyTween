@@ -1,6 +1,10 @@
 # GGTween
 
-Free license: CC BY Murnik Roman
+╔══════════════════════════════════╗
+║ Free license: CC BY Murnik Roman ║
+╠══════════════════════════════════╣
+║ Tested in Unity 2019.2.X +	   ║
+╚══════════════════════════════════╝
 
 ===== Support types =====
 - Generic (any type of the following)
