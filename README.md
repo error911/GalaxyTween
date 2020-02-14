@@ -52,7 +52,7 @@ void Sample_2()
 using GGTools;
 void Sample_3()
 {
-	int t = Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 10, 0, null, false, TweenType.Bounce);
+	Tween.TweenFloat((x)=>Debug.Log(x), 0.0f, 1.0f, 10, 0, null, false, TweenType.Bounce);
 }
 ```
 ## Animation completion events Example (События при завершении анимации)
