@@ -5,7 +5,7 @@
 
 using UnityEngine;
 
-namespace GGTeam.Tools.Tween
+namespace GGTeam.GalaxyTween
 {
 
     /// <summary>

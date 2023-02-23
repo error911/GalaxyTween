@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GGTeam.Tools.Tween
+namespace GGTeam.GalaxyTween
 {
     //[ExecuteInEditMode]
     public class Tween : MonoBehaviour
@@ -48,7 +48,7 @@ namespace GGTeam.Tools.Tween
             {
                 if (m_Instance == null)
                 {
-                    m_Instance = new GameObject("GGTweenModule").AddComponent<Tween>();
+                    m_Instance = new GameObject("GalaxyTweenModule").AddComponent<Tween>();
                 }
                 return m_Instance;
             }
