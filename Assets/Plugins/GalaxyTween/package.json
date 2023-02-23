@@ -1,0 +1,17 @@
+{
+  "name": "com.unity.galaxytween",
+  "displayName": "GalaxyTween",
+  "author": { "name": "Murnik Roman", "url": "https://github.com/error911/GalaxyTween/" },
+  "version": "1.0.0",
+  "unity": "2019.2",
+  "description": "Allows you to easily create a transition, animation, lerp or timer.",
+  "keywords": [ 
+	"Tween",
+	"Lerp",
+	"Transition", 
+	"Timer" 
+	],
+  "license": "MIT",
+  "category": "Task",
+  "dependencies": {}
+}
