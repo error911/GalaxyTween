@@ -5,6 +5,11 @@ Allows you to easily create a transition, animation, lerp or timer.
 Free license: CC BY Murnik Roman    
 Tested in Unity 2019.2.X +
 
+### Install from Unity Package Manager.
+You can add `https://github.com/error911/GalaxyTween.git?path=Assets/Plugins/GalaxyTween` to Package Manager
+
+![image](https://user-images.githubusercontent.com/46207/79450714-3aadd100-8020-11ea-8aae-b8d87fc4d7be.png)
+
 Входит в состав набора инструментов GGTools. Рекомендуемое расположение в проекте:    
 Included in the GGTools Toolkit. Recommended location in the project:    
 *Assets/GGTools/GGTween*    
